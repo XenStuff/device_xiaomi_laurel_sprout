@@ -20,7 +20,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 
 # Inherit some common AEX stuff
-$(call inherit-product, vendor/aosp/common.mk)
+$(call inherit-product, vendor/derp/config/common_full_phone.mk)
 
 # Inherit from laurel_sprout device
 $(call inherit-product, $(LOCAL_PATH)/laurel_sprout.mk)
@@ -29,7 +29,7 @@ PRODUCT_BROKEN_VERIFY_USES_LIBRARIES := true
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := laurel_sprout
 PRODUCT_MANUFACTURER := Xiaomi
-PRODUCT_NAME := aosp_laurel_sprout
+PRODUCT_NAME := derp_laurel_sprout
 PRODUCT_MODEL := Mi A3
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
@@ -37,22 +37,7 @@ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 # ABI Checks
 SKIP_ABI_CHECKS := true
 
-BUILD_FINGERPRINT := "Xiaomi/laurel_sprout/laurel_sprout:11/RKQ1.200903.002/V12.0.20.0.RFQMIXM:user/release-keys"
-
-EXTRA_UDFPS_ICONS := true
-
+# Derpfest ig
 EXTRA_UDFPS_ANIMATIONS := true
-
-# Official build flag
-EXTENDED_BUILD_TYPE=OFFICIAL
-
-# Props
-WITH_GAPPS := true
-TARGET_SHIPS_SEPERATE_GAPPS_BUILD := true
-TARGET_BOOT_ANIMATION_RES := 720
-TARGET_SUPPORTS_GOOGLE_RECORDER := true
-TARGET_GAPPS_ARCH := arm64
-TARGET_HAS_FOD := true
-TARGET_SHIP_GCAM_GO := false
-TARGET_SUPPORTS_QUICK_TAP := true
-TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_SCREEN_WIDTH := 720
+TARGET_SCREEN_HEIGHT := 1560
